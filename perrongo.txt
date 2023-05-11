@@ -1,0 +1,82 @@
+#include <iostream>
+
+
+using namespace std;
+
+class perro{
+private:
+    string nombre;
+    string color;
+    int edad;
+
+public:
+    perro(){
+
+    }
+
+    perro(string n,string c,int e){
+    nombre=e;
+    color=c;
+    edad=e;
+    }
+
+    string getnombre(){
+    return nombre;
+
+    }
+
+    string getcolor(){
+    return color;
+
+    }
+     int getedad(){
+    return edad;
+
+    }
+
+    void setnombre(string n){
+    nombre=n;
+
+    }
+
+
+    void setcolor(string c){
+    color=c;
+
+    }
+
+    void setedad(int e){
+    edad=e;
+
+    }
+
+
+    void ladrar(){
+    cout <<("el perro ladra")<< endl;
+
+    }
+
+
+    void caminar(){
+    cout <<("el perro camina")<< endl;
+
+    }
+
+
+};
+
+    int main(){
+
+    perro perrin = perro();
+    perrin.setnombre ("lolo");
+    perrin.setcolor ("marron");
+    perrin.setedad (16);
+    cout <<("El perro se llama ")<<perrin.getnombre()<<endl;
+    cout <<("El perro es de color ")<<perrin.getcolor()<<endl;
+    cout <<("El perro tiene ")<<perrin.getedad()<<endl;
+    perrin.ladrar();
+    perrin.caminar();
+
+
+
+    }

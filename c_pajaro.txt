@@ -1,0 +1,67 @@
+#include <iostream>
+
+
+using namespace std;
+
+class Pajaro{
+    private:
+    string nombre;
+    string color;
+    int edad;
+
+    public:
+    Pajaro(){
+
+    }
+    Pajaro(string n, string c, int e){
+        nombre = n;
+        color = c;
+        edad = e;
+    }
+    void volar(){
+        cout<<"El pajaro vuela libre "<<endl;
+
+    }
+
+    void cantar(){
+        cout<<"El pajaro canta feliz "<<endl;
+
+    }
+
+    string getnombre(){
+        return nombre;
+    }
+
+    string getcolor(){
+        return color;
+    }
+
+    int getedad(){
+        return edad;
+    }
+
+    void setnombre(string n){
+        nombre = n;
+    }
+
+    void setcolor(string c){
+        color = c;
+    }
+
+    void setedad(int e){
+        edad = e;
+    }
+
+};
+
+int main(){
+    Pajaro Canario = Pajaro();
+    Canario.setnombre("Roberto");
+    Canario.setcolor("rojo");
+    Canario.setedad(21);
+    cout << "Nombre: " << Canario.getnombre() << endl;
+    cout << "Color: " << Canario.getcolor() << endl;
+    cout << "Edad: " << Canario.getedad() << endl;
+    Canario.volar();
+    Canario.cantar();
+}
