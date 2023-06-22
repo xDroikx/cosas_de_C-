@@ -1,0 +1,131 @@
+#include <iostream>
+
+using namespace std;
+
+class mascotas{
+protected:
+string name;
+string color;
+int edad;
+
+public:
+mascotas(){
+};
+
+mascotas(string n, string c, int e ){
+this->name=n;
+this->color=c;
+this->edad=e;
+
+}
+string getname(){
+return name;
+}
+string getcolor(){
+return color;
+}
+int getedad(){
+return edad;
+}
+void setname(string n){
+name=n;
+}
+void setcolor(string c){
+color=c;
+}
+void setedad(int e){
+edad=e;
+}
+void mear(){
+cout <<"la mascota mea"<<endl;
+}
+
+};
+
+class perro:public mascotas{
+public:
+int altura;
+double peso;
+
+perro(int a, double p){
+this->altura=a;
+this->peso=p;
+}
+int getaltura(){
+return altura;
+}
+double getpeso(){
+return peso;
+}
+void setaltura(int a){
+altura=a;
+}
+void setpeso(double p){
+peso=p;
+}
+
+void mear(){
+cout <<"el perro mea en el arbol"<<endl;
+}
+void ladrar(){
+cout <<"el perro ladra"<<endl;
+}
+
+};
+class gato:public mascotas{
+public:
+string pelaje;
+string garras;
+
+gato(string pe, string g){
+this->pelaje=pe;
+this->garras=g;
+}
+string getpelaje(){
+return pelaje;
+}
+string getgarras(){
+return garras;
+}
+void setpelaje(string pe){
+pelaje=pe;
+}
+void setgarras(string g){
+garras=g;
+}
+
+void mear(){
+cout <<"el gato mea en su caja"<<endl;
+}
+void maullar(){
+cout <<"el gato maulla"<<endl;
+}
+
+};
+
+int main(){
+perro dogo = perro(30,15.00);
+gato siames = gato("largo","cortas");
+dogo.setname("Toby");
+dogo.setcolor("marron");
+dogo.setedad(10);
+cout <<"El perro se llama "<<dogo.getname()<<endl;
+cout <<"El perro es de color "<<dogo.getcolor()<<endl;
+cout <<"El perro tiene "<<dogo.getedad()<<" anos"<<endl;
+cout <<"El perro mide "<<dogo.getaltura()<<" CM"<<endl;
+cout <<"El perro pesa "<<dogo.getpeso()<<" KG"<<endl;
+dogo.mear();
+dogo.ladrar();
+cout <<"==================="<<endl;
+siames.setname("logi");
+siames.setcolor("blanco");
+siames.setedad(7);
+cout <<"El gato se llama "<<siames.getname()<<endl;
+cout <<"El gato es de color "<<siames.getcolor()<<endl;
+cout <<"El gato tiene "<<siames.getedad()<<" anos"<<endl;
+cout <<"El gato tiene "<<siames.getpelaje()<<endl;
+cout <<"El gato tiene "<<siames.getgarras()<<endl;
+siames.mear();
+siames.maullar();
+
+}
